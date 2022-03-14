@@ -15,6 +15,9 @@ export default function DemoList() {
         <li>
           <Link to="/demos/table">Table</Link>
         </li>
+        <li>
+          <Link to="/demos/pagination">Pagination</Link>
+        </li>
       </ol>
     </div>
   );

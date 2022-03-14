@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import AccordionDemo from "./pages/AccordionDemo";
 import CarouselDemo from "./pages/CarouselDemo";
 import TableDemo from "./pages/TableDemo";
+import PaginationDemo from "./pages/PaginationDemo";
 import DemoList from "./components/DemoList";
 
 const GlobalStyles = createGlobalStyle`
@@ -34,6 +35,7 @@ function App() {
               <Route path="accordion" element={<AccordionDemo />} />
               <Route path="carousel" element={<CarouselDemo />} />
               <Route path="table" element={<TableDemo />} />
+              <Route path="pagination" element={<PaginationDemo />} />
             </Route>
           </Route>
         </Routes>
