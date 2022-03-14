@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AccordionDemo from "./pages/AccordionDemo";
+import CarouselDemo from "./pages/CarouselDemo";
 import DemoList from "./components/DemoList";
 
 const GlobalStyles = createGlobalStyle`
@@ -12,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: "Inter", sans-serif;
     color: #343a40;
@@ -30,6 +31,7 @@ function App() {
             <Route path="demos">
               <Route index element={<DemoList />} />
               <Route path="accordion" element={<AccordionDemo />} />
+              <Route path="carousel" element={<CarouselDemo />} />
             </Route>
           </Route>
         </Routes>

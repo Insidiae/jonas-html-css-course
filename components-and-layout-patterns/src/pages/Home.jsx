@@ -8,7 +8,6 @@ export default function Home() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
         <DemoList />
       </header>
     </div>

@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 export default function DemoList() {
   return (
     <div>
-      Component Demos
+      <p>Component Demos</p>
       <ol>
         <li>
           <Link to="/demos/accordion">Accordion</Link>
+        </li>
+        <li>
+          <Link to="/demos/carousel">Carousel</Link>
         </li>
       </ol>
     </div>

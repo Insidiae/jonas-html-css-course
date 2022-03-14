@@ -94,6 +94,4 @@ const ContentsWrapper = styled.div`
   }
 `;
 
-export default Accordion;
-
 export { Accordion, AccordionItem };
