@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AccordionDemo from "./pages/AccordionDemo";
 import CarouselDemo from "./pages/CarouselDemo";
+import TableDemo from "./pages/TableDemo";
 import DemoList from "./components/DemoList";
 
 const GlobalStyles = createGlobalStyle`
@@ -32,6 +33,7 @@ function App() {
               <Route index element={<DemoList />} />
               <Route path="accordion" element={<AccordionDemo />} />
               <Route path="carousel" element={<CarouselDemo />} />
+              <Route path="table" element={<TableDemo />} />
             </Route>
           </Route>
         </Routes>

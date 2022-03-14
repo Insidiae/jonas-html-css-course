@@ -12,6 +12,9 @@ export default function DemoList() {
         <li>
           <Link to="/demos/carousel">Carousel</Link>
         </li>
+        <li>
+          <Link to="/demos/table">Table</Link>
+        </li>
       </ol>
     </div>
   );
