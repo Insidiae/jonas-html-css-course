@@ -13,6 +13,7 @@ import PaginationDemo from "./pages/PaginationDemo";
 
 // Layout Patterns
 import Hero from "./layout/Hero";
+import AppLayout from "./layout/AppLayout";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -42,6 +43,7 @@ function App() {
               <Route path="table" element={<TableDemo />} />
               <Route path="pagination" element={<PaginationDemo />} />
               <Route path="hero" element={<Hero />} />
+              <Route path="app-layout" element={<AppLayout />} />
             </Route>
           </Route>
         </Routes>

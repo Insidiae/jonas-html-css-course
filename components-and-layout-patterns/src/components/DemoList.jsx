@@ -24,6 +24,9 @@ export default function DemoList() {
         <li>
           <Link to="/demos/hero">Hero Section</Link>
         </li>
+        <li>
+          <Link to="/demos/app-layout">App Layout</Link>
+        </li>
       </ol>
     </div>
   );
