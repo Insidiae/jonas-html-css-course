@@ -19,6 +19,12 @@ export default function DemoList() {
           <Link to="/demos/pagination">Pagination</Link>
         </li>
       </ol>
+      <p>Layout Demos</p>
+      <ol>
+        <li>
+          <Link to="/demos/hero">Hero Section</Link>
+        </li>
+      </ol>
     </div>
   );
 }

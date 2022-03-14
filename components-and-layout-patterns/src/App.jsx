@@ -3,11 +3,16 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
+import DemoList from "./components/DemoList";
+
+// Components
 import AccordionDemo from "./pages/AccordionDemo";
 import CarouselDemo from "./pages/CarouselDemo";
 import TableDemo from "./pages/TableDemo";
 import PaginationDemo from "./pages/PaginationDemo";
-import DemoList from "./components/DemoList";
+
+// Layout Patterns
+import Hero from "./layout/Hero";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -36,6 +41,7 @@ function App() {
               <Route path="carousel" element={<CarouselDemo />} />
               <Route path="table" element={<TableDemo />} />
               <Route path="pagination" element={<PaginationDemo />} />
+              <Route path="hero" element={<Hero />} />
             </Route>
           </Route>
         </Routes>
