@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export default function ChallengeBase() {
+export default function FloatChallenge() {
   return (
     <Wrapper>
       <Product>
