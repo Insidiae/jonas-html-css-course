@@ -12,7 +12,8 @@ export default function MainPage() {
           <Nav>
             <NavLink to="/">Blog</NavLink>{" "}
             <NavLink to="challenges">Challenges</NavLink>{" "}
-            <NavLink to="/">Flexbox</NavLink> <NavLink to="/">CSS Grid</NavLink>
+            <NavLink to="/flexbox">Flexbox</NavLink>{" "}
+            <NavLink to="/">CSS Grid</NavLink>
           </Nav>
         </MainHeader>
 

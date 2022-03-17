@@ -6,6 +6,7 @@ import "./App.css";
 import MainPage from "./components/MainPage";
 import Challenges from "./components/Challenges";
 import FloatChallenge from "./layouts/float/FloatChallenge";
+import FlexboxDemo from "./layouts/flexbox/FlexboxDemo";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -26,6 +27,7 @@ function App() {
               <Route index element={<Challenges />} />
               <Route path="float" element={<FloatChallenge />} />
             </Route>
+            <Route path="flexbox" element={<FlexboxDemo />} />
           </Route>
         </Routes>
       </Router>
