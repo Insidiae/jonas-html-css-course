@@ -115,7 +115,7 @@ const ColorOptions = styled.div`
 `;
 
 interface ColorProps {
-  style?: { "--color"?: string };
+  style?: { "--color": string };
 }
 
 const ColorOption = styled.div<ColorProps>`

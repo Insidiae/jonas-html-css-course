@@ -1,46 +1,55 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export default function FloatChallenge() {
+export default function ChallengeBase() {
   return (
     <Wrapper>
       <Product>
         <ProductTitle>Converse Chuck Taylor All Star Low Top</ProductTitle>
-        <img
-          src="https://i.imgur.com/ZrTU3VK.jpeg"
-          alt="Chuck Taylor All Star Shoe"
-          height="250"
-          width="250"
-        />
-        <Price>
-          <strong>$65.00</strong>
-        </Price>
-        <Shipping>Free shipping</Shipping>
-        <Sale>Sale</Sale>
+        <Clearfix>
+          <ProductImage
+            src="https://i.imgur.com/ZrTU3VK.jpeg"
+            alt="Chuck Taylor All Star Shoe"
+            height="250"
+            width="250"
+          />
 
-        <ProductDescription>
-          Ready to dress up or down, these classic canvas Chucks are an everyday
-          wardrobe staple.
-        </ProductDescription>
-        <MoreInfo href="https://converse.com" target="_blank">
-          More information &rarr;
-        </MoreInfo>
+          <ProductInfo>
+            {/* <Clearfix> */}
+            <Price>
+              <strong>$65.00</strong>
+            </Price>
+            <Shipping>Free shipping</Shipping>
+            {/* </Clearfix> */}
+            <Sale>Sale</Sale>
 
-        <ColorOptions>
-          <ColorOption></ColorOption>
-          <ColorOption style={{ "--color": "#2f6ee2" }}></ColorOption>
-          <ColorOption style={{ "--color": "#ec2f2f" }}></ColorOption>
-          <ColorOption style={{ "--color": "#f0bf1e" }}></ColorOption>
-          <ColorOption style={{ "--color": "#90cc20" }}></ColorOption>
-          <ColorOption style={{ "--color": "#885214" }}></ColorOption>
-        </ColorOptions>
+            <ProductDescription>
+              Ready to dress up or down, these classic canvas Chucks are an
+              everyday wardrobe staple.
+            </ProductDescription>
+            <MoreInfo href="https://converse.com" target="_blank">
+              More information &rarr;
+            </MoreInfo>
 
-        <DetailsTitle>Product details</DetailsTitle>
-        <DetailsList>
-          <li>Lightweight, durable canvas sneaker</li>
-          <li>Lightly padded footbed for added comfort</li>
-          <li>Iconic Chuck Taylor ankle patch.</li>
-        </DetailsList>
+            <ColorOptions>
+              <ColorOption></ColorOption>
+              <ColorOption style={{ "--color": "#2f6ee2" }}></ColorOption>
+              <ColorOption style={{ "--color": "#ec2f2f" }}></ColorOption>
+              <ColorOption style={{ "--color": "#f0bf1e" }}></ColorOption>
+              <ColorOption style={{ "--color": "#90cc20" }}></ColorOption>
+              <ColorOption style={{ "--color": "#885214" }}></ColorOption>
+            </ColorOptions>
+          </ProductInfo>
+
+          <ProductInfo>
+            <DetailsTitle>Product details</DetailsTitle>
+            <DetailsList>
+              <li>Lightweight, durable canvas sneaker</li>
+              <li>Lightly padded footbed for added comfort</li>
+              <li>Iconic Chuck Taylor ankle patch.</li>
+            </DetailsList>
+          </ProductInfo>
+        </Clearfix>
         <AddToCart>Add to cart</AddToCart>
       </Product>
     </Wrapper>
@@ -55,6 +64,7 @@ const Wrapper = styled.main`
 const Product = styled.article`
   border: 4px solid black;
   width: 825px;
+  /* width: 1200px; */
   margin: 50px auto;
   position: relative;
 `;
@@ -67,8 +77,33 @@ const ProductTitle = styled.h2`
   padding: 15px;
 `;
 
+const ProductImage = styled.img`
+  margin-right: 40px;
+  float: left;
+`;
+
+const Clearfix = styled.div`
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+`;
+
+const ProductInfo = styled.section`
+  width: 243px;
+  float: left;
+  margin-top: 20px;
+  margin-right: 40px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
 const Price = styled.p`
   font-size: 24px;
+  float: left;
 `;
 
 const Shipping = styled.p`
@@ -76,7 +111,9 @@ const Shipping = styled.p`
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
+  margin-top: 8px;
   margin-bottom: 20px;
+  float: right;
 `;
 
 const Sale = styled.p`
@@ -93,7 +130,9 @@ const Sale = styled.p`
   left: -38px;
 `;
 
-const ProductDescription = styled.p``;
+const ProductDescription = styled.p`
+  clear: both;
+`;
 
 const MoreInfo = styled.a`
   &,
@@ -115,7 +154,7 @@ const ColorOptions = styled.div`
 `;
 
 interface ColorProps {
-  style?: { "--color"?: string };
+  style?: { "--color": string };
 }
 
 const ColorOption = styled.div<ColorProps>`
@@ -130,7 +169,7 @@ const DetailsTitle = styled.h3`
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 15px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 `;
 
 const DetailsList = styled.ul`
