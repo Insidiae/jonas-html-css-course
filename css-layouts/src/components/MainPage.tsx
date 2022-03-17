@@ -10,10 +10,9 @@ export default function MainPage() {
           <Title>📘 The Code Magazine</Title>
 
           <Nav>
-            <NavLink href="#">Blog</NavLink>{" "}
-            <NavLink href="#">Challenges</NavLink>{" "}
-            <NavLink href="#">Flexbox</NavLink>{" "}
-            <NavLink href="#">CSS Grid</NavLink>
+            <NavLink to="/">Blog</NavLink>{" "}
+            <NavLink to="challenges">Challenges</NavLink>{" "}
+            <NavLink to="/">Flexbox</NavLink> <NavLink to="/">CSS Grid</NavLink>
           </Nav>
         </MainHeader>
 
@@ -146,9 +145,9 @@ export default function MainPage() {
           </RelatedPostList>
         </RelatedPostsWrapper>
 
-        <footer>
+        <Footer>
           <Copyright>Copyright &copy; 2027 by The Code Magazine.</Copyright>
-        </footer>
+        </Footer>
       </Container>
     </Wrapper>
   );
@@ -163,7 +162,7 @@ const Wrapper = styled.main`
 `;
 
 const Container = styled.div`
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -176,7 +175,13 @@ const MainHeader = styled.header`
   padding-right: 40px; */
   padding: 20px 40px;
   margin-bottom: 60px;
-  /* height: 80px; */
+
+  /* FLOATS */
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 `;
 
 const Title = styled.h1`
@@ -189,13 +194,19 @@ const Title = styled.h1`
     font-style: normal;
     margin-right: 5px;
   }
+
+  /* FLOATS */
+  float: left;
 `;
 
 const Nav = styled.nav`
   font-size: 18px;
+
+  /* FLOATS */
+  float: right;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: #1098ad;
   text-decoration: none;
   margin-right: 30px;
@@ -224,6 +235,10 @@ const NavLink = styled.a`
 
 const PostWrapper = styled.article`
   margin-bottom: 60px;
+
+  /* FLOATS */
+  width: 825px;
+  float: left;
 `;
 
 const PostHeader = styled.header`
@@ -275,11 +290,20 @@ const ListItem = styled.li`
   }
 `;
 
-const AuthorImg = styled.img``;
+const AuthorImg = styled.img`
+  /* FLOATS */
+  float: left;
+  margin-bottom: 20px;
+`;
 
 const AuthorInfo = styled(Paragraph)`
   font-style: italic;
   font-size: 18px;
+
+  /* FLOATS */
+  float: left;
+  padding-top: 10px;
+  margin-left: 20px;
 `;
 
 const PostImg = styled.img`
@@ -330,11 +354,16 @@ const RelatedPostsWrapper = styled.aside`
   border-bottom: 5px solid #1098ad;
   /* padding-top: 50px;
   padding-bottom: 50px; */
-  padding: 50px 0;
+  padding: 50px 40px;
   width: 500px;
+
+  /* FLOATS */
+  width: 300px;
+  float: right;
 `;
 
 const RelatedPostsHeading = styled.h4`
+  margin-bottom: 30px;
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
@@ -342,6 +371,7 @@ const RelatedPostsHeading = styled.h4`
 
 const RelatedPostList = styled(List)`
   list-style: none;
+  margin-left: 0;
 `;
 
 const RelatedPost = styled(ListItem)``;
@@ -349,6 +379,10 @@ const RelatedPost = styled(ListItem)``;
 const RelatedPostAuthor = styled(Paragraph)`
   font-size: 18px;
   font-weight: bold;
+`;
+
+const Footer = styled.footer`
+  clear: both;
 `;
 
 const Copyright = styled(Paragraph)`
