@@ -7,3 +7,4 @@ Course Exercises from Jonas Schmedtmann's HTML and CSS course, rebuilt with Reac
 1. [Components and Layout Patterns](components-and-layout-patterns/)
 2. [Layouts: Floats, Flexbox, and CSS Grid Fundamentals](css-layouts/)
    - CSS Grid Exercises coming soon!
+3. [Web Design Rules and Framework](web-design/)
