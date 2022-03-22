@@ -20,9 +20,7 @@ export default function ChairCard({ chair }: { chair: Chair }) {
         <ChairPriceWrapper>
           {/* Just imagine this number is already formatted lmao */}
           <strong>{chair.price}€</strong>
-          <Button as="button" size="small">
-            Add to cart
-          </Button>
+          <Button>Add to cart</Button>
         </ChairPriceWrapper>
       </ChairWrapper>
     </Wrapper>

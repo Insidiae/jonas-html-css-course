@@ -1,7 +1,6 @@
+//* Trying to implement the CSS Variables trick from #CSSforJS
 import * as React from "react";
 import styled from "styled-components/macro";
-
-import type { StyledComponentProps } from "styled-components";
 
 interface ButtonStyles extends React.CSSProperties {
   "--font-size"?: string;
@@ -25,17 +24,12 @@ const buttonVariants = createButtonVariants({
   },
 });
 
-interface BaseButtonProps {
-  size?: keyof typeof buttonVariants;
-  styles?: ButtonStyles;
-}
-
-//TODO: Find a way to extend Styled Component and/or React props
+//TODO: Find a way to properly extend Styled Component props
 interface ButtonProps {
-  //! FIX THIS!
-  children?: any;
-  as?: any;
-  href?: any;
+  //? This works, but still feels kinda iffy
+  // children?: any;
+  // href?: any;
+  as?: string | React.ComponentType<any>;
 
   size?: keyof typeof buttonVariants;
   style?: ButtonStyles;
@@ -45,12 +39,12 @@ export default function Button({
   size = "small",
   style,
   ...props
-}: ButtonProps) {
+}: React.ComponentPropsWithoutRef<"button" | "a"> & ButtonProps) {
   const variantStyles = buttonVariants[size];
-  return <BaseButton {...props} style={{ ...variantStyles, ...style }} />;
+  return <BaseButton style={{ ...variantStyles, ...style }} {...props} />;
 }
 
-const BaseButton = styled.a<ButtonProps>`
+const BaseButton = styled.button<ButtonProps>`
   display: block;
   margin: 0;
   padding: 0;
