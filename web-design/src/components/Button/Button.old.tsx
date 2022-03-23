@@ -2,15 +2,16 @@
 import * as React from "react";
 import styled, { css } from "styled-components/macro";
 
+// This seems to be the return type of that `css` tagged template literal
 import type { FlattenSimpleInterpolation } from "styled-components";
 
-const createButtonVariants = <
-  ButtonVariantsType extends Record<string, FlattenSimpleInterpolation>
+const createButtonSizes = <
+  ButtonSizesType extends Record<string, FlattenSimpleInterpolation>
 >(
-  buttonVariants: ButtonVariantsType
-) => buttonVariants;
+  buttonSizes: ButtonSizesType
+) => buttonSizes;
 
-const buttonVariants = createButtonVariants({
+const buttonSizes = createButtonSizes({
   small: css`
     font-size: 14px;
     padding: 8px 12px;
@@ -22,7 +23,7 @@ const buttonVariants = createButtonVariants({
 });
 
 interface ButtonProps {
-  size?: keyof typeof buttonVariants;
+  size?: keyof typeof buttonSizes;
 }
 
 const BaseButton = styled.button`
@@ -45,8 +46,7 @@ const BaseButton = styled.button`
 `;
 
 const Button = styled(BaseButton)<ButtonProps>`
-  ${(props) =>
-    props.size ? buttonVariants[props.size] : buttonVariants["small"]}
+  ${(props) => (props.size ? buttonSizes[props.size] : buttonSizes["small"])}
 `;
 
 export default Button;

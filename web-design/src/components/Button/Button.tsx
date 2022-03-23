@@ -7,13 +7,13 @@ interface ButtonStyles extends React.CSSProperties {
   "--padding"?: string;
 }
 
-const createButtonVariants = <
-  ButtonVariantsType extends Record<string, ButtonStyles>
+const createButtonSizes = <
+  ButtonSizesType extends Record<string, ButtonStyles>
 >(
-  buttonVariants: ButtonVariantsType
-) => buttonVariants;
+  buttonSizes: ButtonSizesType
+) => buttonSizes;
 
-const buttonVariants = createButtonVariants({
+const buttonSizes = createButtonSizes({
   small: {
     "--font-size": "14px",
     "--padding": "8px 12px",
@@ -31,7 +31,7 @@ interface ButtonProps {
   // href?: any;
   as?: string | React.ComponentType<any>;
 
-  size?: keyof typeof buttonVariants;
+  size?: keyof typeof buttonSizes;
   style?: ButtonStyles;
 }
 
@@ -40,8 +40,8 @@ export default function Button({
   style,
   ...props
 }: React.ComponentPropsWithoutRef<"button" | "a"> & ButtonProps) {
-  const variantStyles = buttonVariants[size];
-  return <BaseButton style={{ ...variantStyles, ...style }} {...props} />;
+  const sizeStyles = buttonSizes[size];
+  return <BaseButton style={{ ...sizeStyles, ...style }} {...props} />;
 }
 
 const BaseButton = styled.button<ButtonProps>`
