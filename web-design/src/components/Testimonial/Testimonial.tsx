@@ -27,6 +27,9 @@ export default function Testimonial() {
 
 const Wrapper = styled.section`
   margin-bottom: 48px;
+  padding: 24px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 `;
 
 const Grid = styled.div`

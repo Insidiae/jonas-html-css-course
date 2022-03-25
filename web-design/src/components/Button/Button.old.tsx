@@ -27,7 +27,7 @@ interface ButtonProps {
 }
 
 const BaseButton = styled.button`
-  display: block;
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
@@ -42,6 +42,16 @@ const BaseButton = styled.button`
   }
   &:focus:not(:focus-visible) {
     outline: none;
+  }
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary-light);
   }
 `;
 

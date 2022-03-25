@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components/macro";
 
 const GlobalStyles = createGlobalStyle`
-// Self-host an optimized font
+/* Self-host an optimized font */
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -30,8 +30,18 @@ FONT SIZE SYSTEM (px)
 /* ------------------------ */
 /* GENERAL STYLES */
 /* ------------------------ */
+html {
+  --color-primary: hsl(162deg 94% 30%);
+  --color-primary-light: hsl(162deg 94% 34%);
+  --color-text: hsl(210deg 19% 23%);
+  --color-text-light: hsl(210deg 16% 31%);
+  --color-white: hsl(210deg 1% 98%);
+}
+
 body {
   font-family: Inter, sans-serif;
+  color: var(--color-text);
+  border-bottom: 8px solid var(--color-primary);
 }
 `;
 

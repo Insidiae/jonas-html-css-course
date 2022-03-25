@@ -45,13 +45,14 @@ export default function Button({
 }
 
 const BaseButton = styled.button<ButtonProps>`
-  display: block;
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   background: transparent;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
   font: inherit;
   color: inherit;
   &:focus {
@@ -59,6 +60,16 @@ const BaseButton = styled.button<ButtonProps>`
   }
   &:focus:not(:focus-visible) {
     outline: none;
+  }
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary-light);
   }
 
   font-size: var(--font-size);

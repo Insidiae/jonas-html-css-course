@@ -13,5 +13,6 @@ export default function Footer() {
 
 const Wrapper = styled.footer`
   margin-bottom: 48px;
+  color: var(--color-text-light);
   font-size: ${14 / 16}rem;
 `;
