@@ -46,11 +46,15 @@ const TestimonialWrapper = styled.div`
 
 const TestimonialTitle = styled.h2`
   margin-bottom: 24px;
+  font-size: ${24 / 16}rem;
+  letter-spacing: -0.5px;
 `;
 
 const TestimonialText = styled.blockquote`
-  font-style: italic;
   margin-bottom: 24px;
+  font-size: ${18 / 16}rem;
+  font-style: italic;
+  line-height: 1.7;
 `;
 
 const TestimonialAuthor = styled.p``;

@@ -15,11 +15,11 @@ const createButtonSizes = <
 
 const buttonSizes = createButtonSizes({
   small: {
-    "--font-size": "14px",
+    "--font-size": `${14 / 16}rem`,
     "--padding": "8px 12px",
   },
   large: {
-    "--font-size": "18px",
+    "--font-size": `${18 / 16}rem`,
     "--padding": "16px 32px",
   },
 });

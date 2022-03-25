@@ -23,6 +23,8 @@ const Wrapper = styled.section`
 `;
 const Title = styled.h2`
   margin-bottom: 48px;
+  font-size: ${36 / 16}rem;
+  letter-spacing: -0.5px;
 `;
 
 const Grid = styled.div`

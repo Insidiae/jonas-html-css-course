@@ -13,4 +13,5 @@ export default function Footer() {
 
 const Wrapper = styled.footer`
   margin-bottom: 48px;
+  font-size: ${14 / 16}rem;
 `;

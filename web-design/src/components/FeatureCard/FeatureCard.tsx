@@ -16,6 +16,10 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
 
 const FeatureTitleWrapper = styled.p`
   margin-bottom: 16px;
+  font-size: ${20 / 16}rem;
 `;
 
-const FeatureText = styled.p``;
+const FeatureText = styled.p`
+  font-size: ${18 / 16}rem;
+  line-height: 1.7;
+`;

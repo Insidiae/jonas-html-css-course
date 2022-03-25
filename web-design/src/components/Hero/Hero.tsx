@@ -36,10 +36,15 @@ const HeroTextBox = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 24px;
+  font-size: ${44 / 16}rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
 `;
 
 const HeroText = styled.p`
   margin-bottom: 24px;
+  font-size: ${18 / 16}rem;
+  line-height: 1.7;
 `;
 
 const HeroImage = styled.img`

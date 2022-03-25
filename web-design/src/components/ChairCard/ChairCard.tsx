@@ -39,6 +39,7 @@ const ChairWrapper = styled.div`
 
 const ChairName = styled.h3`
   margin-bottom: 24px;
+  font-size: ${20 / 16}rem;
 `;
 
 const ChairDetails = styled.ul`
@@ -60,4 +61,5 @@ const ChairDetailsItem = styled.li`
 const ChairPriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: ${20 / 16}rem;
 `;

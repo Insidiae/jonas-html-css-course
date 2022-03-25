@@ -13,11 +13,11 @@ const createButtonSizes = <
 
 const buttonSizes = createButtonSizes({
   small: css`
-    font-size: 14px;
+    font-size: ${14 / 16}rem;
     padding: 8px 12px;
   `,
   large: css`
-    font-size: 18px;
+    font-size: ${18 / 16}rem;
     padding: 16px 32px;
   `,
 });
@@ -46,7 +46,11 @@ const BaseButton = styled.button`
 `;
 
 const Button = styled(BaseButton)<ButtonProps>`
-  ${(props) => (props.size ? buttonSizes[props.size] : buttonSizes["small"])}
+  /* 
+    ${(props) => (props.size ? buttonSizes[props.size] : buttonSizes["small"])}
+  */
+  /* OR: */
+  ${({ size = "small" }) => buttonSizes[size]}
 `;
 
 export default Button;
