@@ -26,8 +26,8 @@ const Wrapper = styled.header`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
-  margin-bottom: 48px; ;
+  margin-top: 64px;
+  margin-bottom: 96px;
 `;
 
 const HeroTextBox = styled.div`
@@ -35,7 +35,7 @@ const HeroTextBox = styled.div`
 `;
 
 const Title = styled.h1`
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-size: ${44 / 16}rem;
   line-height: 1.1;
   letter-spacing: -1px;

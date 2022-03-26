@@ -26,10 +26,10 @@ export default function Testimonial() {
 }
 
 const Wrapper = styled.section`
-  margin-bottom: 48px;
+  margin-bottom: 96px;
   padding: 24px;
   border-radius: 36px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-1000);
   color: var(--color-white);
 `;
 
@@ -57,9 +57,12 @@ const TestimonialTitle = styled.h2`
 
 const TestimonialText = styled.blockquote`
   margin-bottom: 24px;
+  color: var(--color-primary-100);
   font-size: ${18 / 16}rem;
   font-style: italic;
   line-height: 1.7;
 `;
 
-const TestimonialAuthor = styled.p``;
+const TestimonialAuthor = styled.p`
+  color: var(--color-primary-200);
+`;

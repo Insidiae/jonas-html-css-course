@@ -11,7 +11,7 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
     <div>
       <FeatureIcon
         id={feature.icon}
-        color={COLORS.primary}
+        color={COLORS.primary[1000]}
         size={32}
         strokeWidth={2}
       />
@@ -29,7 +29,7 @@ const FeatureTitleWrapper = styled.p`
 `;
 
 const FeatureIcon = styled(Icon)`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `;
 
 const FeatureText = styled.p`

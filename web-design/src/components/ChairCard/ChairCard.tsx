@@ -17,7 +17,11 @@ export default function ChairCard({ chair }: { chair: Chair }) {
         <ChairDetails>
           {chair.details.map((chairDetail) => (
             <ChairDetailsItem key={chairDetail.text}>
-              <Icon id={chairDetail.icon} color={COLORS.primary} size={24} />
+              <Icon
+                id={chairDetail.icon}
+                color={COLORS.primary[1000]}
+                size={24}
+              />
               <span>{chairDetail.text}</span>
             </ChairDetailsItem>
           ))}
@@ -43,7 +47,7 @@ const ChairImage = styled.img`
 `;
 
 const ChairWrapper = styled.div`
-  padding: 24px;
+  padding: 32px;
 `;
 
 const ChairName = styled.h3`
@@ -53,14 +57,14 @@ const ChairName = styled.h3`
 
 const ChairDetails = styled.ul`
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 `;
 
 const ChairDetailsItem = styled.li`
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 
   &:last-child {
     margin-bottom: 0;
@@ -70,5 +74,6 @@ const ChairDetailsItem = styled.li`
 const ChairPriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: ${20 / 16}rem;
 `;

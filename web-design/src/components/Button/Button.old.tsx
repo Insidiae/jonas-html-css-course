@@ -49,14 +49,14 @@ const BaseButton = styled.button`
     It just need to be bigger than the button's height!
   */
   border-radius: 100px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-1000);
   color: var(--color-white);
   font-weight: 500;
   text-transform: uppercase;
 
   &:hover,
   &:active {
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-900);
   }
 `;
 

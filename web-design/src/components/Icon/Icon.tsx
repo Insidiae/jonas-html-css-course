@@ -19,6 +19,8 @@ const Icon = ({ id, color, size, strokeWidth = 2, ...props }: IconProps) => {
 };
 
 const Wrapper = styled.div<IconWrapperProps>`
+  display: inline-block;
+
   & > svg {
     display: block;
     stroke-width: ${(p) =>

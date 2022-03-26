@@ -19,8 +19,9 @@ export default function ChairGrid() {
 }
 
 const Wrapper = styled.section`
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 `;
+
 const Title = styled.h2`
   margin-bottom: 48px;
   font-size: ${36 / 16}rem;

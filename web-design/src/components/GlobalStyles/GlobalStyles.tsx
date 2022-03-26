@@ -33,8 +33,16 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 html {
-  --color-primary: ${COLORS.primary};
-  --color-primary-light: ${COLORS.primaryLight};
+  --color-primary-100: ${COLORS.primary[100]};
+  --color-primary-200: ${COLORS.primary[200]};
+  --color-primary-300: ${COLORS.primary[300]};
+  --color-primary-400: ${COLORS.primary[400]};
+  --color-primary-500: ${COLORS.primary[500]};
+  --color-primary-600: ${COLORS.primary[600]};
+  --color-primary-700: ${COLORS.primary[700]};
+  --color-primary-800: ${COLORS.primary[800]};
+  --color-primary-900: ${COLORS.primary[900]};
+  --color-primary-1000: ${COLORS.primary[1000]};
   --color-text: ${COLORS.text};
   --color-text-light: ${COLORS.textLight};
   --color-white: ${COLORS.white};
@@ -43,7 +51,7 @@ html {
 body {
   font-family: Inter, sans-serif;
   color: var(--color-text);
-  border-bottom: 8px solid var(--color-primary);
+  border-bottom: 8px solid var(--color-primary-1000);
 }
 `;
 

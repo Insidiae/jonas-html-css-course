@@ -19,7 +19,7 @@ export default function FeatureGrid() {
 }
 
 const Wrapper = styled.section`
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 `;
 
 const Title = styled.h2`
