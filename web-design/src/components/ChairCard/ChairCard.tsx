@@ -33,11 +33,13 @@ export default function ChairCard({ chair }: { chair: Chair }) {
 }
 
 const Wrapper = styled.figure`
+  border-radius: 12px;
   box-shadow: 0 20px 30px 0 hsl(0deg 0% 0% / 0.07);
 `;
 
 const ChairImage = styled.img`
   width: 100%;
+  border-radius: 12px 12px 0 0;
 `;
 
 const ChairWrapper = styled.div`

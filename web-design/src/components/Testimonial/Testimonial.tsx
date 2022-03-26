@@ -28,6 +28,7 @@ export default function Testimonial() {
 const Wrapper = styled.section`
   margin-bottom: 48px;
   padding: 24px;
+  border-radius: 36px;
   background-color: var(--color-primary);
   color: var(--color-white);
 `;
@@ -40,6 +41,7 @@ const Grid = styled.div`
 
 const TestimonialImage = styled.img`
   width: 100%;
+  border-radius: 12px;
 `;
 
 const TestimonialWrapper = styled.div`

@@ -49,4 +49,5 @@ const HeroText = styled.p`
 
 const HeroImage = styled.img`
   width: 100%;
+  border-radius: 12px;
 `;

@@ -44,6 +44,11 @@ const BaseButton = styled.button`
     outline: none;
   }
 
+  /* 
+    Any large value would work here.
+    It just need to be bigger than the button's height!
+  */
+  border-radius: 100px;
   background-color: var(--color-primary);
   color: var(--color-white);
   font-weight: 500;
