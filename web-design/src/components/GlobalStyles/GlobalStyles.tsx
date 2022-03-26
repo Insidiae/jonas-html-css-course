@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components/macro";
 
+import { COLORS } from "../../constants";
+
 const GlobalStyles = createGlobalStyle`
 /* Self-host an optimized font */
 @font-face {
@@ -31,11 +33,11 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 html {
-  --color-primary: hsl(162deg 94% 30%);
-  --color-primary-light: hsl(162deg 94% 34%);
-  --color-text: hsl(210deg 19% 23%);
-  --color-text-light: hsl(210deg 16% 31%);
-  --color-white: hsl(210deg 1% 98%);
+  --color-primary: ${COLORS.primary};
+  --color-primary-light: ${COLORS.primaryLight};
+  --color-text: ${COLORS.text};
+  --color-text-light: ${COLORS.textLight};
+  --color-white: ${COLORS.white};
 }
 
 body {

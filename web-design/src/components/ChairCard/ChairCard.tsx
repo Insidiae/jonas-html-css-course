@@ -1,8 +1,12 @@
 import * as React from "react";
 import styled from "styled-components/macro";
 
-import type { Chair } from "../../data/chairs";
 import Button from "../Button";
+import Icon from "../Icon";
+
+import { COLORS } from "../../constants";
+
+import type { Chair } from "../../data/chairs";
 
 export default function ChairCard({ chair }: { chair: Chair }) {
   return (
@@ -13,6 +17,7 @@ export default function ChairCard({ chair }: { chair: Chair }) {
         <ChairDetails>
           {chair.details.map((chairDetail) => (
             <ChairDetailsItem key={chairDetail.text}>
+              <Icon id={chairDetail.icon} color={COLORS.primary} size={24} />
               <span>{chairDetail.text}</span>
             </ChairDetailsItem>
           ))}

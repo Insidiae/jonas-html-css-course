@@ -1,4 +1,7 @@
+import type { IconType } from "../components/Icon/types";
+
 interface ChairDetails {
+  icon: IconType;
   text: string;
 }
 
@@ -19,15 +22,19 @@ export const chairs: Array<Chair> = [
     price: 250,
     details: [
       {
+        icon: "sparkles",
         text: "Leisure and relaxing",
       },
       {
+        icon: "clock",
         text: "Comfortable for 4h",
       },
       {
+        icon: "globe",
         text: "Vegan leather",
       },
       {
+        icon: "cube",
         text: "Weighs 16 kg",
       },
     ],
@@ -39,15 +46,19 @@ export const chairs: Array<Chair> = [
     price: 525,
     details: [
       {
+        icon: "sparkles",
         text: "Work",
       },
       {
+        icon: "clock",
         text: "Comfortable for 8h",
       },
       {
+        icon: "globe",
         text: "Vegan leather",
       },
       {
+        icon: "cube",
         text: "Weighs 22 kg",
       },
     ],
@@ -59,15 +70,19 @@ export const chairs: Array<Chair> = [
     price: 1450,
     details: [
       {
+        icon: "sparkles",
         text: "Leisure and relaxing",
       },
       {
+        icon: "clock",
         text: "Comfortable all day!",
       },
       {
+        icon: "globe",
         text: "Organic cotton",
       },
       {
+        icon: "cube",
         text: "Weighs 80 kg",
       },
     ],
