@@ -14,8 +14,7 @@ export default function Challenges() {
           <Link to="flexbox">Flexbox</Link>
         </li>
         <li>
-          {/* <Link to="grid">Grid</Link> */}
-          Grid (Coming Soon)
+          <Link to="grid">Grid</Link>
         </li>
       </ol>
     </Wrapper>

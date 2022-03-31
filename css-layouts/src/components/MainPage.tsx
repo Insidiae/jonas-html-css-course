@@ -13,150 +13,155 @@ export default function MainPage() {
             <NavLink to="/">Blog</NavLink>{" "}
             <NavLink to="challenges">Challenges</NavLink>{" "}
             <NavLink to="/flexbox">Flexbox</NavLink>{" "}
-            <NavLink to="/">CSS Grid</NavLink>
+            <NavLink to="/grid">CSS Grid</NavLink>
           </Nav>
         </MainHeader>
 
         {/* ONLY NECESSARY FOR FLEXBOX */}
-        <Row>
-          <PostWrapper>
-            <PostHeader>
-              <PostTitle>The Basic Language of the Web: HTML</PostTitle>
+        {/* <Row> */}
+        <PostWrapper>
+          <PostHeader>
+            <PostTitle>The Basic Language of the Web: HTML</PostTitle>
 
-              <AuthorWrapper>
-                <AuthorImg
-                  src="img/laura-jones.jpg"
-                  alt="Headshot of Laura Jones"
-                  height="50"
-                  width="50"
-                />
-
-                <AuthorInfo>
-                  Posted by <strong>Laura Jones</strong> on Monday, June 21st
-                  2027
-                </AuthorInfo>
-              </AuthorWrapper>
-
-              <PostImg
-                src="img/post-img.jpg"
-                alt="HTML code on a screen"
-                width="500"
-                height="200"
-                className="post-img"
+            <AuthorWrapper>
+              <AuthorImg
+                src="img/laura-jones.jpg"
+                alt="Headshot of Laura Jones"
+                height="50"
+                width="50"
               />
-              <LikeButton>❤️ Like</LikeButton>
-            </PostHeader>
 
-            <Paragraph>
-              All modern websites and web applications are built using three{" "}
-              <em>fundamental</em> technologies: HTML, CSS and JavaScript. These
-              are the languages of the web.
-            </Paragraph>
+              <AuthorInfo>
+                Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+              </AuthorInfo>
+            </AuthorWrapper>
 
-            <Paragraph>
-              In this post, let's focus on HTML. We will learn what HTML is all
-              about, and why you too should learn it.
-            </Paragraph>
+            <PostImg
+              src="img/post-img.jpg"
+              alt="HTML code on a screen"
+              width="500"
+              height="200"
+              className="post-img"
+            />
+            <LikeButton>❤️ Like</LikeButton>
+          </PostHeader>
 
-            <SectionTitle>What is HTML?</SectionTitle>
-            <Paragraph>
-              HTML stands for <strong>H</strong>yper<strong>T</strong>ext{" "}
-              <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
-              language that web developers use to structure and describe the
-              content of a webpage (not a programming language).
-            </Paragraph>
-            <Paragraph>
-              HTML consists of elements that describe different types of
-              content: paragraphs, links, headings, images, video, etc. Web
-              browsers understand HTML and render HTML code as websites.
-            </Paragraph>
-            <Paragraph>In HTML, each element is made up of 3 parts:</Paragraph>
+          <Paragraph>
+            All modern websites and web applications are built using three{" "}
+            <em>fundamental</em> technologies: HTML, CSS and JavaScript. These
+            are the languages of the web.
+          </Paragraph>
 
-            <List as="ol">
-              <ListItem>The opening tag</ListItem>
-              <ListItem>The closing tag</ListItem>
-              <ListItem>The actual element</ListItem>
-            </List>
+          <Paragraph>
+            In this post, let's focus on HTML. We will learn what HTML is all
+            about, and why you too should learn it.
+          </Paragraph>
 
-            <Paragraph>
-              You can learn more at{" "}
-              <PostLink
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                target="_blank"
-              >
-                MDN Web Docs
-              </PostLink>
-              .
-            </Paragraph>
+          <SectionTitle>What is HTML?</SectionTitle>
+          <Paragraph>
+            HTML stands for <strong>H</strong>yper<strong>T</strong>ext{" "}
+            <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+            language that web developers use to structure and describe the
+            content of a webpage (not a programming language).
+          </Paragraph>
+          <Paragraph>
+            HTML consists of elements that describe different types of content:
+            paragraphs, links, headings, images, video, etc. Web browsers
+            understand HTML and render HTML code as websites.
+          </Paragraph>
+          <Paragraph>In HTML, each element is made up of 3 parts:</Paragraph>
 
-            <SectionTitle>Why should you learn HTML?</SectionTitle>
+          <List as="ol">
+            <ListItem>The opening tag</ListItem>
+            <ListItem>The closing tag</ListItem>
+            <ListItem>The actual element</ListItem>
+          </List>
 
-            <Paragraph>
-              There are countless reasons for learning the fundamental language
-              of the web. Here are 5 of them:
-            </Paragraph>
+          <Paragraph>
+            You can learn more at{" "}
+            <PostLink
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+            >
+              MDN Web Docs
+            </PostLink>
+            .
+          </Paragraph>
 
-            <List>
-              <ListItem>
-                To be able to use the fundamental web dev language
-              </ListItem>
-              <ListItem>
-                To hand-craft beautiful websites instead of relying on tools
-                like Worpress or Wix
-              </ListItem>
-              <ListItem>To build web applications</ListItem>
-              <ListItem>To impress friends</ListItem>
-              <ListItem>To have fun 😃</ListItem>
-            </List>
+          <SectionTitle>Why should you learn HTML?</SectionTitle>
 
-            <Paragraph>
-              Hopefully you learned something new here. See you next time!
-            </Paragraph>
-          </PostWrapper>
+          <Paragraph>
+            There are countless reasons for learning the fundamental language of
+            the web. Here are 5 of them:
+          </Paragraph>
 
-          <RelatedPostsWrapper>
-            <RelatedPostsHeading>Related posts</RelatedPostsHeading>
+          <List>
+            <ListItem>
+              To be able to use the fundamental web dev language
+            </ListItem>
+            <ListItem>
+              To hand-craft beautiful websites instead of relying on tools like
+              Worpress or Wix
+            </ListItem>
+            <ListItem>To build web applications</ListItem>
+            <ListItem>To impress friends</ListItem>
+            <ListItem>To have fun 😃</ListItem>
+          </List>
 
-            <RelatedPostList>
-              <RelatedPost>
-                <img
-                  src="img/related-1.jpg"
-                  alt="Person programming"
-                  width="75"
-                  height="75"
-                />{" "}
+          <Paragraph>
+            Hopefully you learned something new here. See you next time!
+          </Paragraph>
+        </PostWrapper>
+
+        <RelatedPostsWrapper>
+          <RelatedPostsHeading>Related posts</RelatedPostsHeading>
+
+          <RelatedPostList>
+            <RelatedPost>
+              <img
+                src="img/related-1.jpg"
+                alt="Person programming"
+                width="75"
+                height="75"
+              />{" "}
+              <div>
                 <RelatedPostLink href="#">
                   How to Learn Web Development
                 </RelatedPostLink>
                 <RelatedPostAuthor>By Jonas Schmedtmann</RelatedPostAuthor>
-              </RelatedPost>
-              <RelatedPost>
-                <img
-                  src="img/related-2.jpg"
-                  alt="Lightning"
-                  width="75"
-                  height="75"
-                />{" "}
+              </div>
+            </RelatedPost>
+            <RelatedPost>
+              <img
+                src="img/related-2.jpg"
+                alt="Lightning"
+                width="75"
+                height="75"
+              />{" "}
+              <div>
                 <RelatedPostLink href="#">
                   The Unknown Powers of CSS
                 </RelatedPostLink>
                 <RelatedPostAuthor>By Jim Dillon</RelatedPostAuthor>
-              </RelatedPost>
-              <RelatedPost>
-                <img
-                  src="img/related-3.jpg"
-                  alt="JavaScript code on a screen"
-                  width="75"
-                  height="75"
-                />{" "}
+              </div>
+            </RelatedPost>
+            <RelatedPost>
+              <img
+                src="img/related-3.jpg"
+                alt="JavaScript code on a screen"
+                width="75"
+                height="75"
+              />{" "}
+              <div>
                 <RelatedPostLink href="#">
                   Why JavaScript is Awesome
                 </RelatedPostLink>
                 <RelatedPostAuthor>By Matilda</RelatedPostAuthor>
-              </RelatedPost>
-            </RelatedPostList>
-          </RelatedPostsWrapper>
-        </Row>
+              </div>
+            </RelatedPost>
+          </RelatedPostList>
+        </RelatedPostsWrapper>
+        {/* </Row> */}
 
         <Footer>
           <Copyright>Copyright &copy; 2027 by The Code Magazine.</Copyright>
@@ -179,6 +184,13 @@ const Container = styled.div`
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
+
+  /* CSS GRID LAYOUT */
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
 `;
 
 const MainHeader = styled.header`
@@ -187,7 +199,7 @@ const MainHeader = styled.header`
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 
   /* FLOATS */
   /* &::after {
@@ -200,6 +212,9 @@ const MainHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* CSS GRID LAYOUT */
+  grid-column: 1 / -1;
 `;
 
 const Title = styled.h1`
@@ -228,7 +243,6 @@ const NavLink = styled(Link)`
   color: #1098ad;
   text-decoration: none;
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 
   &:visited {
@@ -267,8 +281,8 @@ const PostWrapper = styled.article`
   float: left; */
 
   /* FLEXBOX LAYOUT */
-  flex: 1;
-  margin-bottom: 0;
+  /* flex: 1;
+  margin-bottom: 0; */
 `;
 
 const PostHeader = styled.header`
@@ -396,14 +410,13 @@ const RelatedPostsWrapper = styled.aside`
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 40px;
-  width: 500px;
 
   /* FLOATS */
   /* width: 300px;
   float: right; */
 
   /* FLEXBOX LAYOUT */
-  flex: 0 0 300px;
+  /* flex: 0 0 300px; */
 `;
 
 const RelatedPostsHeading = styled.h4`
@@ -448,6 +461,9 @@ const RelatedPostAuthor = styled(Paragraph)`
 const Footer = styled.footer`
   /* FLOATS */
   /* clear: both; */
+
+  /* CSS GRID LAYOUT */
+  grid-column: 1 / -1;
 `;
 
 const Copyright = styled(Paragraph)`

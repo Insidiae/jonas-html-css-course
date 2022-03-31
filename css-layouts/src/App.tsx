@@ -7,7 +7,9 @@ import MainPage from "./components/MainPage";
 import Challenges from "./components/Challenges";
 import FloatChallenge from "./layouts/float/FloatChallenge";
 import FlexboxDemo from "./layouts/flexbox/FlexboxDemo";
+import GridDemo from "./layouts/grid/GridDemo";
 import FlexboxChallenge from "./layouts/flexbox/FlexboxChallenge";
+import GridChallenge from "./layouts/grid/GridChallenge";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -28,8 +30,10 @@ function App() {
               <Route index element={<Challenges />} />
               <Route path="float" element={<FloatChallenge />} />
               <Route path="flexbox" element={<FlexboxChallenge />} />
+              <Route path="grid" element={<GridChallenge />} />
             </Route>
             <Route path="flexbox" element={<FlexboxDemo />} />
+            <Route path="grid" element={<GridDemo />} />
           </Route>
         </Routes>
       </Router>
@@ -39,3 +43,4 @@ function App() {
 }
 
 export default App;
+
